@@ -9,5 +9,8 @@ April 20, 2018
 * Betrayed my preference in the battle with favicon
 
 TODO
-* Styling
-* Routing
+* With more time, this would be sliced up more. `Cards.js` is bearing way too much weight.
+* Accommodate articles in alphabetizing
+* More error checking
+* Ability to sort ascending or descending
+* Further dry out code
