@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid, Image, Jumbotron } from 'react-bootstrap';
 
 import './styles/index.css';
 import hi5Logo from './hi5-logo.png';
@@ -7,14 +8,14 @@ import Cards from './cards';
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <header className="jumbotron">
-          <img src={ hi5Logo } className="pull-right" alt="logo" />
-          <h1 className="display-4">Movie Battle</h1>
-          <h2 className="lead">Star Wars vs. Marvel Universe</h2>
-        </header>
+      <Grid fluid>
+        <Jumbotron componentClass='header'>
+          <Image src={ hi5Logo } className="jumbotron-logo" alt="h15.agency logo" responsive />
+          <h1><strong>Movie Battle</strong></h1>
+          <h2>Star Wars vs. Marvel Cinematic Universe</h2>
+        </Jumbotron>
         <Cards/>
-      </div>
+      </Grid>
     );
   }
 }

@@ -1,19 +1,93 @@
 body {
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
-  padding: 0;
-  font-family: 'Nunito', sans-serif; }
+  padding: 0; }
 
 .container-fluid .jumbotron {
   background-color: transparent;
   border-bottom: 2px solid silver;
-  border-radius: 0; }
+  border-radius: 0;
+  padding-top: 60px; }
 
-.card {
-  border: 1px solid silver;
-  height: 50rem; }
+.jumbotron-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  max-width: 20rem; }
+  @media (min-width: 768px) {
+    .jumbotron-logo {
+      position: absolute;
+      top: 1rem;
+      left: 60px; } }
+  @media (min-width: 992px) {
+    .jumbotron-logo {
+      float: right;
+      position: relative;
+      max-width: 20%; } }
 
-.card-img-top {
-  max-height: 35rem;
-  margin: 0.5rem auto; }
+.filter-options,
+.sort-options {
+  margin-top: 3rem; }
+
+.btn.mod-sort,
+.btn.mod-filter {
+  border: 1px solid #50ADAA; }
+  .btn.mod-sort:active, .btn.mod-sort:focus, .btn.mod-sort:hover,
+  .btn.mod-filter:active,
+  .btn.mod-filter:focus,
+  .btn.mod-filter:hover {
+    background-color: #50ADAA; }
+
+.panel {
+  border: none;
+  box-shadow: none;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .panel {
+      height: 50rem; } }
+  .panel .panel-heading {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 6rem;
+    justify-content: center; }
+    @media (min-width: 992px) {
+      .panel .panel-heading {
+        height: 8rem; } }
+  .panel .panel-title {
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 1.25em;
+    font-weight: bolder; }
+
+.panel-img-wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 30rem; }
+
+.panel-image {
+  height: 100%; }
+
+.panel-btn {
+  background-color: #50ADAA;
+  color: #fff;
+  margin: 1rem auto; }
+  .panel-btn:hover, .panel-btn:active, .panel-btn:focus {
+    background-color: #489c99;
+    color: #fff; }
+
+.label.mod-starwars {
+  background-color: #FDED55;
+  color: #333; }
+
+.label.mod-marvel {
+  background-color: #DD3A31; }
+
+@media (min-width: 768px) {
+  .sticky-top {
+    position: sticky;
+    top: 5rem; } }
 
 /*# sourceMappingURL=index.css.map */

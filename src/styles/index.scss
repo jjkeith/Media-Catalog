@@ -1,3 +1,9 @@
+$primary-color: #50ADAA;
+$background-color: #fff;
+$starwars-color: #FDED55;
+$marvel-color: #DD3A31;
+$body-text-color: #333;
+
 
 @mixin m-absolute-positioner( $top: null, $right: null, $bottom: null, $left: null) {
   position: absolute;
@@ -8,31 +14,108 @@
 }
 
 body {
+  background-color: $background-color;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
 }
 
 .container-fluid .jumbotron {
   background-color: transparent;
   border-bottom: 2px solid silver;
   border-radius: 0;
+  padding-top: 60px;
 }
 
-.card {
-  border: 1px solid silver;
-  height: 50rem;
+  .jumbotron-logo {
+    @include m-absolute-positioner( 1rem, null, null, 1rem );
+    max-width: 20rem;
+    @media (min-width: 768px) {
+      @include m-absolute-positioner( 1rem, null, null, 60px );
+    }
+    @media ( min-width: 992px ) {
+      float: right;
+      position: relative;
+      max-width: 20%;
+    }
+  }
+
+.filter-options,
+.sort-options {
+  margin-top: 3rem;
 }
 
-.card-img-top {
-  max-height: 35rem;
-  margin: 0.5rem auto;
+.btn.mod-sort,
+.btn.mod-filter {
+  border: 1px solid $primary-color;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $primary-color;
+  }
 }
 
-.card-footer {
-
+.panel {
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  @media ( min-width: 768px ) {
+    height: 50rem;
+  }
+  .panel-heading {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    @media ( min-width: 992px ) {
+      height: 8rem;
+    }
+  }
+  .panel-title {
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 1.25em;
+    font-weight: bolder;
+  }
 }
 
-.card-btn {
+  .panel-img-wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 30rem;
+  }
 
-}
+    .panel-image {
+      height: 100%
+    }
+
+  .panel-btn {
+    background-color: $primary-color;
+    color: $background-color;
+    margin: 1rem auto;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken( $primary-color, 5% );
+      color: $background-color;
+    }
+  }
+
+  .label.mod-starwars {
+    background-color: $starwars-color;
+    color: $body-text-color;
+  }
+
+  .label.mod-marvel {
+    background-color: $marvel-color;
+  }
+
+  // Bootstrap utility class not included in this build
+  .sticky-top {
+    @media ( min-width: 768px ) {
+      position: sticky;
+      top: 5rem;
+    }
+  }
